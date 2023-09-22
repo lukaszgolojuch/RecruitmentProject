@@ -13,7 +13,7 @@ Feature: Exercise 1 - all test scenarios for exercise 1 testing
     And user clicks submit button to check solution
     Then information about incorrect answer should be displayed
 
-  Scenario Outline: Negative scenario - user clicks incorrect sequence of buttons (single additional click)
+  Scenario Outline: Negative scenario - user clicks incorrect sequence of buttons (skip one button - sequence too short)
     When user skips <LackOfClickPlacement> click
     And user clicks submit button to check solution
     Then information about incorrect answer should be displayed
@@ -34,6 +34,6 @@ Feature: Exercise 1 - all test scenarios for exercise 1 testing
       | end                      |
 
   Scenario: Negative scenario - user clicks incorrect sequence of buttons (additional click on beginning and at the end)
-    When user clicks incorrect sequence of buttons with two additional clicks in the beggining and in the end
+    When user clicks incorrect sequence of buttons with two additional clicks in the beginning and in the end
     And user clicks submit button to check solution
     Then information about incorrect answer should be displayed

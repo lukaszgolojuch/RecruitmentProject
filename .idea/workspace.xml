@@ -4,15 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7b5cf59-27be-46be-898f-03ff61e4b740" name="Changes" comment="Setup of dependencies and properties&#10;&#10;Implement informationProvider.properties for browser + URL storage&#10;Add needed dependencies for test automation:&#10;- selenium-java&#10;- junit&#10;- cucumber-junit&#10;- cucumber-java&#10;- cucumber-picocontainer">
-      <change afterPath="$PROJECT_DIR$/src/test/java/suites/TestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/exerciseOne.feature" afterDir="false" />
+    <list default="true" id="c7b5cf59-27be-46be-898f-03ff61e4b740" name="Changes" comment="Test scenarios implementation&#10;&#10;Implement test scenarios&#10;Create TestRunner &#10;Implement Browser as interface and ChromeBrowser for chrome testing">
+      <change afterPath="$PROJECT_DIR$/src/main/java/enums/ExerciseOneButtons.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ExerciseOnePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ExercisesBasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/InformationProviderUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/WaitUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/setup/Initialization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/setup/TestContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/ExerciseOneStepDefinitions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/InitializationStepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/exerciseOne.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/exerciseOne.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,8 +74,38 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="suites" />
+      <recent name="utils" />
+      <recent name="pageObjects" />
+      <recent name="enums" />
+      <recent name="stepDefinitions" />
+      <recent name="setup" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Feature: exerciseOne" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/exerciseOne.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="RecruitmentProjectOne" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: exerciseOne" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber Java.Feature: exerciseOne" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -88,12 +130,20 @@
       <option name="project" value="LOCAL" />
       <updated>1695403525964</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Test scenarios implementation&#10;&#10;Implement test scenarios&#10;Create TestRunner &#10;Implement Browser as interface and ChromeBrowser for chrome testing">
+      <created>1695405937412</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695405937412</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Setup of dependencies and properties&#10;&#10;Implement informationProvider.properties for browser + URL storage&#10;Add needed dependencies for test automation:&#10;- selenium-java&#10;- junit&#10;- cucumber-junit&#10;- cucumber-java&#10;- cucumber-picocontainer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup of dependencies and properties&#10;&#10;Implement informationProvider.properties for browser + URL storage&#10;Add needed dependencies for test automation:&#10;- selenium-java&#10;- junit&#10;- cucumber-junit&#10;- cucumber-java&#10;- cucumber-picocontainer" />
+    <MESSAGE value="Test scenarios implementation&#10;&#10;Implement test scenarios&#10;Create TestRunner &#10;Implement Browser as interface and ChromeBrowser for chrome testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test scenarios implementation&#10;&#10;Implement test scenarios&#10;Create TestRunner &#10;Implement Browser as interface and ChromeBrowser for chrome testing" />
   </component>
 </project>
