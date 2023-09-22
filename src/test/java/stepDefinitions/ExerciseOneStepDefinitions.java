@@ -57,14 +57,9 @@ public class ExerciseOneStepDefinitions {
         getExerciseOne().checkIfExpectedMessageDisplayed(false);
     }
 
-    @When("user skips first click")
-    public void userSkipsFirstClick() {
-        getExerciseOne().clickSequenceWithoutElementNumber(0);
-    }
-
-    @When("user skips last click")
-    public void userSkipsLastClick() {
-        getExerciseOne().clickSequenceWithoutElementNumber(2);
+    @When("user skips {int} click")
+    public void userSkipsFirstClick(Integer numberOfElementInSequence) {
+        getExerciseOne().clickSequenceWithoutElementNumber(numberOfElementInSequence);
     }
 
     @When("user clicks incorrect sequence of buttons with single additional click in the beginning")
