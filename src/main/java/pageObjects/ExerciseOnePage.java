@@ -19,7 +19,7 @@ public class ExerciseOnePage extends ExercisesBasePage {
     private static final String FIRST_BUTTON_ID = "btnButton1";
     private static final String SECOND_BUTTON_ID = "btnButton2";
     private static final String CHECK_SOLUTION_BUTTON_ID = "solution";
-    private static final String SEQUENCE_INFO_CODE_BLOCK_XPATH = "td:nth-of-type(3) > code";
+    private static final String SEQUENCE_INFO_CODE_BLOCK_CSS = "td:nth-of-type(3) > code";
     private static final String MESSAGE_CODE_BLOCK_CLASS = "wrap";
     private static final String NOT_OK_MESSAGE_TEXT = "NOT OK.";
     private static final String OK_MESSAGE_TEXT = "OK. Good answer";
@@ -32,7 +32,7 @@ public class ExerciseOnePage extends ExercisesBasePage {
     private static WebElement checkSolutionButtonWebElement;
     @FindBy(className = MESSAGE_CODE_BLOCK_CLASS)
     private static WebElement messageCodeBlockWebElement;
-    @FindBy(css = SEQUENCE_INFO_CODE_BLOCK_XPATH)
+    @FindBy(css = SEQUENCE_INFO_CODE_BLOCK_CSS)
     private static WebElement sequenceInfoCodeBlockWebElement;
 
     WaitUtils waitUtils;
@@ -53,11 +53,6 @@ public class ExerciseOnePage extends ExercisesBasePage {
     public void waitForPageToBeLoaded() {
         basePageCommonElementsVisbility();
         commonPageElementsVisibility();
-    }
-
-    private static void commonPageElementsVisibility() {
-        WaitUtils.waitUntilElementVisible(browser.getDriver(), firstButtonWebElement);
-        WaitUtils.waitUntilElementVisible(browser.getDriver(), secondButtonWebElement);
     }
 
     public void clickSequenceWithAdditionalClick(boolean additionalBeginning, boolean additionalEnd) {
@@ -92,6 +87,19 @@ public class ExerciseOnePage extends ExercisesBasePage {
         }
     }
 
+    public void clickSequenceWithoutElementNumber(int skippedElementNumber) {
+        List<ExerciseOneButtons> sequence = getListOfExpectedButtonSequence();
+        int actualElementNumber = 0;
+        for (ExerciseOneButtons singleClick : sequence) {
+            if (singleClick == ExerciseOneButtons.b1 && actualElementNumber != skippedElementNumber) {
+                clickFirstButton();
+            } else if (singleClick == ExerciseOneButtons.b2 && actualElementNumber != skippedElementNumber) {
+                clickSecondButton();
+            }
+            actualElementNumber++;
+        }
+    }
+
     public void clickOppositeSequence() {
         List<ExerciseOneButtons> sequence = getListOfExpectedButtonSequence();
         for (ExerciseOneButtons singleClick : sequence) {
@@ -104,11 +112,11 @@ public class ExerciseOnePage extends ExercisesBasePage {
     }
 
     public void clickCheckSolutionButton() {
-        String oldSequence = sequenceInfoCodeBlockWebElement.getText();
         WaitUtils.waitUntilElementClickable(browser.getDriver(), checkSolutionButtonWebElement);
         checkSolutionButtonWebElement.click();
         waitUtils.waitForInvisibilityOfStringInElement(messageCodeBlockWebElement, "b1");
         waitUtils.waitForInvisibilityOfStringInElement(messageCodeBlockWebElement, "b2");
+        waitUtils.waitForInvisibilityOfStringInElement(messageCodeBlockWebElement, "Trail");
     }
 
     private static void clickFirstButton() {
@@ -139,4 +147,10 @@ public class ExerciseOnePage extends ExercisesBasePage {
             clickSecondButton();
         }
     }
+
+    private static void commonPageElementsVisibility() {
+        WaitUtils.waitUntilElementVisible(browser.getDriver(), firstButtonWebElement);
+        WaitUtils.waitUntilElementVisible(browser.getDriver(), secondButtonWebElement);
+    }
+
 }

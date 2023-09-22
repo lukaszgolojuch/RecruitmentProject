@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7b5cf59-27be-46be-898f-03ff61e4b740" name="Changes" comment="Test scenarios implementation&#10;&#10;Implement test scenarios&#10;Create TestRunner &#10;Implement Browser as interface and ChromeBrowser for chrome testing">
-      <change afterPath="$PROJECT_DIR$/src/main/java/enums/ExerciseOneButtons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ExerciseOnePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ExercisesBasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/InformationProviderUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/WaitUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/setup/Initialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/setup/TestContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/ExerciseOneStepDefinitions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/InitializationStepDefinitions.java" afterDir="false" />
+    <list default="true" id="c7b5cf59-27be-46be-898f-03ff61e4b740" name="Changes" comment="Initialization scripts and step definitions&#10;&#10;Implement:&#10;- test context class&#10;- additional maven dependencies&#10;- step definitions&#10;- enum for ExerciseOneButtons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/exerciseOne.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/exerciseOne.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ExerciseOnePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ExerciseOnePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/ExerciseOneStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/ExerciseOneStepDefinitions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +73,7 @@
       <recent name="setup" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Cucumber Java.Feature: exerciseOne">
     <configuration name="Feature: exerciseOne" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/exerciseOne.feature" />
@@ -101,9 +93,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: Negative scenario - user clicks incorrect sequence of buttons (skip one button - sequence too short)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/exerciseOne.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="RecruitmentProjectOne" />
+      <option name="NAME_FILTER" value="^Negative scenario \- user clicks incorrect sequence of buttons \(skip one button \- sequence too short\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Negative scenario \- user clicks incorrect sequence of buttons \(skip one button \- sequence too short\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Negative scenario - user clicks incorrect sequence of buttons (skip one button - sequence too short)" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Feature: exerciseOne" />
+        <item itemvalue="Cucumber Java.Scenario: Negative scenario - user clicks incorrect sequence of buttons (skip one button - sequence too short)" />
       </list>
     </recent_temporary>
   </component>
@@ -137,13 +150,51 @@
       <option name="project" value="LOCAL" />
       <updated>1695405937412</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="PageObjects implementation and utils&#10;&#10;Implement ExerciseBasePage.java and ExerciseOnePage.java&#10;Implement utils:&#10;    - WaitUtils.java&#10;    - InformationProviderUtils.java">
+      <created>1695406938025</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695406938025</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Initialization scripts and step definitions&#10;&#10;Implement:&#10;- test context class&#10;- additional maven dependencies&#10;- step definitions&#10;- enum for ExerciseOneButtons">
+      <created>1695407149968</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695407149968</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Setup of dependencies and properties&#10;&#10;Implement informationProvider.properties for browser + URL storage&#10;Add needed dependencies for test automation:&#10;- selenium-java&#10;- junit&#10;- cucumber-junit&#10;- cucumber-java&#10;- cucumber-picocontainer" />
     <MESSAGE value="Test scenarios implementation&#10;&#10;Implement test scenarios&#10;Create TestRunner &#10;Implement Browser as interface and ChromeBrowser for chrome testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test scenarios implementation&#10;&#10;Implement test scenarios&#10;Create TestRunner &#10;Implement Browser as interface and ChromeBrowser for chrome testing" />
+    <MESSAGE value="PageObjects implementation and utils&#10;&#10;Implement ExerciseBasePage.java and ExerciseOnePage.java&#10;Implement utils:&#10;    - WaitUtils.java&#10;    - InformationProviderUtils.java" />
+    <MESSAGE value="Initialization scripts and step definitions&#10;&#10;Implement:&#10;- test context class&#10;- additional maven dependencies&#10;- step definitions&#10;- enum for ExerciseOneButtons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialization scripts and step definitions&#10;&#10;Implement:&#10;- test context class&#10;- additional maven dependencies&#10;- step definitions&#10;- enum for ExerciseOneButtons" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepDefinitions/ExerciseOneStepDefinitions.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
